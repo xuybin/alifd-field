@@ -186,19 +186,19 @@ export function mapValidateRules(rules, defaultTrigger) {
 
 let warn = () => {};
 
-if (
-    typeof process !== 'undefined' &&
-    process.env &&
-    process.env.NODE_ENV !== 'production' &&
-    typeof window !== 'undefined' &&
-    typeof document !== 'undefined'
-) {
-    warn = (...args) => {
-        /* eslint-disable no-console */
-        if (typeof console !== 'undefined' && console.error) {
-            console.error(...args);
-        }
-    };
-}
+// if (
+//     typeof process !== 'undefined' &&
+//     process.env &&
+//     process.env.NODE_ENV !== 'production' &&
+//     typeof window !== 'undefined' &&
+//     typeof document !== 'undefined'
+// ) {
+//     warn = (...args) => {
+//         /* eslint-disable no-console */
+//         if (typeof console !== 'undefined' && console.error) {
+//             console.error(...args);
+//         }
+//     };
+// }
 
 export const warning = warn;
